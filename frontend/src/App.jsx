@@ -1,11 +1,14 @@
 import { Container, Stack, Text } from "@chakra-ui/react";
 import Nav from "./components/Nav";
 import UserGrid from "./components/UserGrid";
+import { useState } from "react";
+export const BASE_URL = "http://127.0.0.1:5000/api";
 
 function App() {
+  const [users,setUsers] = useState([]);
   return (
     <Stack minH="100vh">
-      <Nav />
+      <Nav setUsers={setUsers} />
 
       <Container maxW="90%" my={4}>
         <Text
@@ -19,7 +22,7 @@ function App() {
           Workers Module 
         </Text>
 
-        <UserGrid />  
+        <UserGrid users={users} setUsers={setUsers} />  
 
       </Container>
      

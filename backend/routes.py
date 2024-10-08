@@ -19,7 +19,7 @@ def create_friends():
         data= request.json
         required_feilds = ["name","role","description","gender"]
         for feilds in required_feilds:
-             if feilds not in data:
+             if feilds not in data or not data.get(feilds):
                   return jsonify({"error":f"missing {feilds}"})
         name = data.get("name")
         role = data.get("role")
@@ -36,7 +36,7 @@ def create_friends():
         new_friend = Friend(name=name, role=role, description=description, gender= gender, img_url=img_url)
         db.session.add(new_friend)
         db.session.commit()
-        return jsonify({"msg": "Friend created successfully"}), 201
+        return jsonify(new_friend.to_json()), 201
 
     except Exception as e:
             db.session.rollback()
@@ -73,7 +73,7 @@ def update_friends(id):
         friend.description = data.get("description",friend.description)
         friend.gender = data.get("gender",friend.gender)
         db.session.commit()
-        return jsonify(friend.to_json())
+        return jsonify({"msg":"Friend Updated Sucessfully"})
 
      except Exception as e:
           db.session.rollback()

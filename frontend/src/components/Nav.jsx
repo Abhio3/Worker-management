@@ -4,7 +4,7 @@ import { IoMoonSharp } from "react-icons/io5";
 import CreateUserModal from './CreateUserModal';
 import React from 'react';
 
-const Nav = () => {
+const Nav = ({setUsers}) => {
   const { colorMode, toggleColorMode } = useColorMode();  // useColorMode now imported
 
   return (
@@ -37,7 +37,7 @@ const Nav = () => {
             <Button onClick={toggleColorMode} ml={2} padding={1}> {/* Added margin to space out the button */}
               {colorMode === "light" ? <IoMoonSharp /> : <LuSun size={10} />}
             </Button>
-            <CreateUserModal />
+            <CreateUserModal setUsers={setUsers}/>
           </Flex>
         </Flex>
       </Box>
