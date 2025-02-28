@@ -50,7 +50,7 @@ function EditModal({ setUsers, user }) { // Destructured props here
             }
             setUsers((prevUsers) => prevUsers.map((u) => u.id === user.id ? data : u));
             toast({
-                title: "Worker Updated Successfully", // Changed title to reflect update action
+                title: "Plan Updated Successfully", // Changed title to reflect update action
                 status: "success", // Corrected spelling from "Sucess" to "success"
                 duration: 2000,
                 isClosable: true,
@@ -92,7 +92,7 @@ function EditModal({ setUsers, user }) { // Destructured props here
                                 <FormControl>
                                     <FormLabel>Full Name</FormLabel>
                                     <Input
-                                        placeholder='Eg. Abi'
+                                        placeholder='Eg.Swathi '
                                         value={inputs.name}
                                         onChange={(e) => setInputs((prev) => ({ ...prev, name: e.target.value }))} 
                                     />
@@ -101,7 +101,7 @@ function EditModal({ setUsers, user }) { // Destructured props here
                                 <FormControl>
                                     <FormLabel>Role</FormLabel>
                                     <Input
-                                        placeholder='Software Engineer'
+                                        placeholder='Subject'
 										required
                                         value={inputs.role}
                                         onChange={(e) => setInputs((prev) => ({ ...prev, role: e.target.value }))} 
@@ -113,20 +113,20 @@ function EditModal({ setUsers, user }) { // Destructured props here
                                 <Textarea
                                     resize={"none"}
                                     overflowY={"hidden"}
-                                    placeholder="He's a software engineer who loves to code and build things."
+                                    placeholder="New Learning on AI "
                                     value={inputs.description}
                                     onChange={(e) => setInputs((prev) => ({ ...prev, description: e.target.value }))} 
                                 />
                             </FormControl>
                             <FormControl mt={4}>
-                                <FormLabel>Gender</FormLabel>
+                                <FormLabel>Status</FormLabel>
                                 <RadioGroup 
                                     value={inputs.gender} // Bind the selected value
                                     onChange={(value) => setInputs((prev) => ({ ...prev, gender: value }))} // Update gender in state
                                 >
                                     <Flex gap={5}>
-                                        <Radio value="male">Male</Radio>
-                                        <Radio value="female">Female</Radio>
+                                        <Radio value="male">Done </Radio>
+                                        <Radio value="female">Yet To Complete</Radio>
                                     </Flex>
                                 </RadioGroup>
                             </FormControl>

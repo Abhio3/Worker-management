@@ -85,19 +85,19 @@ const CreateUserModal = ({ setUsers }) => {
                 <ModalOverlay />
                 <form onSubmit={handleCreateUser}>
                     <ModalContent>
-                        <ModalHeader>New Worker</ModalHeader>
+                        <ModalHeader>New Plan</ModalHeader>
                         <ModalCloseButton />
                         <ModalBody pb={6}>
                             <Flex alignItems={"center"} gap={4}>
                                 <FormControl>
                                     <FormLabel>Full Name</FormLabel>
-                                    <Input placeholder='Eg: Abhishek' value={inputs.name}
+                                    <Input placeholder='Eg:Swathi' value={inputs.name}
                                         onChange={(e) => setInputs({ ...inputs, name: e.target.value })} />
                                 </FormControl>
 
                                 <FormControl>
-                                    <FormLabel>Role</FormLabel>
-                                    <Input placeholder='Eg: Software Engineer' value={inputs.role}
+                                    <FormLabel>Subject</FormLabel>
+                                    <Input placeholder='Eg: AI' value={inputs.role}
                                         onChange={(e) => setInputs({ ...inputs, role: e.target.value })} />
                                 </FormControl>
                             </Flex>
@@ -105,13 +105,13 @@ const CreateUserModal = ({ setUsers }) => {
                                 <FormLabel>Description</FormLabel>
                                 <Textarea resize={'none'}
                                     overflow={"hidden"}
-                                    placeholder='Eg: He is a Software Engineer who loves to code' value={inputs.description}
+                                    placeholder='Eg: Enter the description ' value={inputs.description}
                                     onChange={(e) => setInputs({ ...inputs, description: e.target.value })} />
                             </FormControl>
                             <RadioGroup mt={4} value={inputs.gender} onChange={(value) => setInputs({ ...inputs, gender: value })}>
                                 <Flex gap={5}>
-                                    <Radio value='male'>Male</Radio>
-                                    <Radio value='female'>Female</Radio>
+                                    <Radio value='male'>Done</Radio>
+                                    <Radio value='female'>Yet to Complete</Radio>
                                 </Flex>
                             </RadioGroup>
                         </ModalBody>

@@ -19,7 +19,7 @@ function App() {
           textAlign={"center"}
           mb={8}
         >
-          Workers Module 
+          Study Plans
         </Text>
 
         <UserGrid users={users} setUsers={setUsers} />  

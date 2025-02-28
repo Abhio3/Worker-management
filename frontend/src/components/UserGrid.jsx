@@ -51,7 +51,7 @@ const UserGrid = ({ users, setUsers }) => {
             <Text as={"span"} fontSize={"2xl"} fontWeight={"bold"} mr={2}>
               Oops !
             </Text>
-            No Workers found.
+            No Plan found.
           </Text>
         </Flex>
       )}

@@ -18,7 +18,7 @@ const UserCard = ({ user, setUsers }) => {
             }
             setUsers((prevUsers) => prevUsers.filter((u) => u.id !== user.id));
             toast({
-                title: "Worker Deleted Successfully",
+                title: "Plan Deleted Successfully",
                 status: "success", // Corrected spelling from "Sucess" to "success"
                 duration: 2000,
                 isClosable: true,

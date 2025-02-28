@@ -28,7 +28,7 @@ const Nav = ({setUsers}) => {
             gap={3}
             display={{ base: 'none', sm: "flex" }}
           >
-            <Text fontSize={"20px"} color={'white'}>Worker Management System</Text>
+            <Text fontSize={"20px"} color={'white'}>Study Planner</Text>
           </Flex>
 
           {/* RIGHT SIDE */}
